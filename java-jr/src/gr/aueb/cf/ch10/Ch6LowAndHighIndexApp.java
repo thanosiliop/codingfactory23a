@@ -10,9 +10,20 @@ package gr.aueb.cf.ch10;
 public class Ch6LowAndHighIndexApp {
 
     public static void main(String[] args) {
+        int[] numbers = {0, 1, 4, 4, 4, 6, 7, 8, 8, 8, 8, 8};
+        final int KEY = 8;
 
+        int[] highLow = getLowAndHighIndexOf(numbers, 8);
+
+        for (int num : highLow) System.out.print(num + " ");
     }
 
+    /**
+     * Returns an array with the low and high index for the key.
+     * @param arr   the given array of numbers.
+     * @param key   the key provided to search.
+     * @return      an array with the low and high index found for the key.
+     */
     public static int[] getLowAndHighIndexOf(int[] arr, int key) {
         int low = 0;
         int high = 0;
